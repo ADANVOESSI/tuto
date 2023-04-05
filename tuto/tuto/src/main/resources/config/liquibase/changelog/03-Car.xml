@@ -16,6 +16,6 @@ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liqui
                 <constraints nullable="false" referencedColumnNames=""/>
             </column>
         </createTable>
-        <addForeignKeyConstraint baseTableName="car" baseColumnNames="model" constraintName="fk_car_model" referencedTableName="model" referencedColumnNames="id" />
+        <addForeignKeyConstraint baseTableName="car" baseColumnNames="model" constraintName="fk_car_model" referencedTableName="model" referencedColumnNames="id" onDelete="NO ACTION" onUpdate="NO ACTION" />
     </changeSet>
 </databaseChangeLog>

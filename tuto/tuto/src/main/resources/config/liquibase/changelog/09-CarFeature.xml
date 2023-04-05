@@ -22,8 +22,8 @@ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liqui
 
         </createTable>
         
-        <addForeignKeyConstraint baseTableName="carfeature" baseColumnNames="car" constraintName="fk_carfeature_car" referencedTableName="car" referencedColumnNames="id" />
-        <addForeignKeyConstraint baseTableName="carfeature" baseColumnNames="feature" constraintName="fk_carfeature_engine" referencedTableName="feature" referencedColumnNames="id" />
+        <addForeignKeyConstraint baseTableName="carfeature" baseColumnNames="car" constraintName="fk_carfeature_car" referencedTableName="car" referencedColumnNames="id" onDelete="NO ACTION" onUpdate="NO ACTION" />
+        <addForeignKeyConstraint baseTableName="carfeature" baseColumnNames="feature" constraintName="fk_carfeature_engine" referencedTableName="feature" referencedColumnNames="id" onDelete="NO ACTION" onUpdate="NO ACTION" />
 
     </changeSet>
 </databaseChangeLog>

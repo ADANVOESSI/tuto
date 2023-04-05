@@ -34,8 +34,8 @@ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liqui
 
         </createTable>
         
-        <addForeignKeyConstraint baseTableName="sale" baseColumnNames="car" constraintName="fk_sale_car" referencedTableName="car" referencedColumnNames="id" />
-        <addForeignKeyConstraint baseTableName="sale" baseColumnNames="customer" constraintName="fk_sale_customer" referencedTableName="customer" referencedColumnNames="id" />
+        <addForeignKeyConstraint baseTableName="sale" baseColumnNames="car" constraintName="fk_sale_car" referencedTableName="car" referencedColumnNames="id" onDelete="NO ACTION" onUpdate="NO ACTION" />
+        <addForeignKeyConstraint baseTableName="sale" baseColumnNames="customer" constraintName="fk_sale_customer" referencedTableName="customer" referencedColumnNames="id" onDelete="NO ACTION" onUpdate="NO ACTION" />
 
     </changeSet>
 </databaseChangeLog>
