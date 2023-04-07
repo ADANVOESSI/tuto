@@ -14,6 +14,7 @@ import java.util.List;
 @Getter
 @Setter 
 @NoArgsConstructor
+@AllArgsConstructor
 
 public class Brand {
 
@@ -27,8 +28,4 @@ public class Brand {
     @OneToMany(mappedBy = "brand", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Model> models = new ArrayList<>();
 
-    public Brand(String name) {
-         this.name = name; 
-    }
-    
 }

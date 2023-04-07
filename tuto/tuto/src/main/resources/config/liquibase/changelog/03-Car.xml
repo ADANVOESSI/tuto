@@ -5,17 +5,24 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
     <changeSet id="create-car-table" author="estelle">
+
         <createTable tableName="car">
+
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
+
             <column name="price" type="decimal(10,2)">
                 <constraints nullable="false"/>
             </column>
+
             <column name="model" type="bigint">
                 <constraints nullable="false" referencedColumnNames=""/>
             </column>
+
         </createTable>
+        
         <addForeignKeyConstraint baseTableName="car" baseColumnNames="model" constraintName="fk_car_model" referencedTableName="model" referencedColumnNames="id" onDelete="NO ACTION" onUpdate="NO ACTION" />
+
     </changeSet>
 </databaseChangeLog>

@@ -9,6 +9,7 @@ import javax.sql.DataSource;
 
 @Configuration
 public class LiquibaseConfiguration {
+    
     @Bean
     public SpringLiquibase liquibase(DataSource dataSource, LiquibaseProperties liquibaseProperties) {
         SpringLiquibase liquibase = new SpringLiquibase();

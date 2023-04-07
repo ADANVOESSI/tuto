@@ -1,32 +1,31 @@
 package com.highfive.tuto.domain;
 
+import com.highfive.tuto.domain.enums.EngineType;
+
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Entity
-@Table(name = "customer")
+@Table(name = "engine")
 @Getter
-@Setter 
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Customer {
-
+public class Engine {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "address")
-    private String address;
+    @Column(name = "type")
+    @Enumerated(EnumType.STRING)
+    private EngineType type;
 
-    @Column(name = "phone")
-    private String phone;
-  
 }

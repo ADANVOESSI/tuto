@@ -5,17 +5,25 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
     <changeSet id="create-model-table" author="estelle">
+
         <createTable tableName="model">
+
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
+
             <column name="name" type="varchar(255)">
                 <constraints nullable="false"/>
             </column>
+
             <column name="brand" type="bigint">
                 <constraints nullable="false" referencedColumnNames=""/>
             </column>
+
         </createTable>
-        <addForeignKeyConstraint baseTableName="model" baseColumnNames="brand" constraintName="fk_model_brand" referencedTableName="brand" referencedColumnNames="id" onDelete="NO ACTION" onUpdate="NO ACTION"/>
+        
+        <addForeignKeyConstraint baseTableName="model" baseColumnNames="brand" constraintName="fk_mamaman" referencedTableName="brand" referencedColumnNames="id" onDelete="NO ACTION" onUpdate="NO ACTION"/>
+
     </changeSet>
+
 </databaseChangeLog>

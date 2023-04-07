@@ -5,7 +5,9 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
     <changeSet id="create-engine-table" author="christoph">
+
         <createTable tableName="engine">
+
             <column name="id" type="bigint" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
@@ -14,10 +16,12 @@ xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liqui
                 <constraints nullable="false"/>
             </column>
 
-            <column name="type" type="enum('hydrogen','electric')">
+            <column name="type" type="enum('diesel','gasoline','hydrogen','electric')">
                 <constraints nullable="false"/>
             </column>
 
         </createTable>
+
     </changeSet>
+
 </databaseChangeLog>

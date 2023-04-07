@@ -6,27 +6,20 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Entity
-@Table(name = "customer")
+@Table(name = "feature")
 @Getter
-@Setter 
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Customer {
-
+public class Feature {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "address")
-    private String address;
-
-    @Column(name = "phone")
-    private String phone;
-  
 }
