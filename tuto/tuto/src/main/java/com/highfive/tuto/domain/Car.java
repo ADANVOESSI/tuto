@@ -32,10 +32,10 @@ public class Car {
 
     @ManyToMany
     @JoinTable(name = "carengine", joinColumns = @JoinColumn( name = "car" ), inverseJoinColumns = @JoinColumn(name = "engine"))
-    private Set<Engine> engines = new HashSet<>();
+    private Set<Engine> engine = new HashSet<>();
 
     @ManyToMany
     @JoinTable(name = "CarFeature", joinColumns = @JoinColumn( name = "car" ), inverseJoinColumns = @JoinColumn(name = "feature"))
-    private Set<Feature> features = new HashSet<>();
+    private Set<Feature> feature = new HashSet<>();
 
 }
